@@ -1,25 +1,24 @@
 #!/bin/bash
 
-mkdir statix
-cd statix
+mkdir cherish
+cd cherish
 
-repo init -u https://github.com/StatiXOS/android_manifest.git -b 11
+repo init -u https://github.com/CherishOS/android_manifest.git -b eleven 
 mkdir -p .repo/local_manifests
-rm .repo/local_manifests/manifest.xml device/phh/treble/statix.mk
-cp ../files/manifest.xml .repo/local_manifests/manifest.xml
+cp ../files/manifest.xml -r .repo/local_manifests/manifest.xml
 
-repo sync --force-sync --no-clone-bundle --current-branch --no-tags -j$(nproc --all)
+repo sync -j6 -q
 
-git clone https://github.com/VegaBobo/treble_experimentations
+git clone https://github.com/phhusson/treble_experimentations.git
 cp ../files/patches-v300l.zip patches.zip
 unzip -o patches.zip
 bash treble_experimentations/apply-patches.sh .
-cp ../files/statix.mk device/phh/treble
 
 cd device/phh/treble
 git clean -fdx
-bash generate.sh statix
+bash generate.sh cherish
 cd ../../..
+cp ../files/cherish.mk device/phh/treble
 
 cd packages/services/Telecomm
 git revert -m 1 10d34b4e320d3da4e8607724b12ea7e132fe8f5f --no-edit # "Merge tag 'LA.QSSI..."
@@ -37,11 +36,11 @@ cd ../..
 buildVariant() {
     lunch $1
     make installclean
-    make -j$(nproc --all) systemimage
     make vndk-test-sepolicy
+    make -j6 systemimage
 }
 
 . build/envsetup.sh
 
 buildVariant treble_arm64_bvS-userdebug
-buildVariant treble_a64_bvS-userdebug
+
