@@ -1,4 +1,4 @@
-simple CherishOS gsi build script
+simple StatiX gsi build script
 Notes:
 ```bash
 use low-ram.sh to cherry-pick patches to help build on low ram devices.
