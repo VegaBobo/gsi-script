@@ -2,7 +2,7 @@ simple StatiX gsi build script
 
 notes:
 ```bash
-low-ram.sh will help if you have low ram, but if it still gives you errors use swap or zram.
+low-ram.sh will help if you have low ram, but if you still get errors use swap or zram.
 setup.sh is a script that will install nessecery packages 
 ```
 credits:
