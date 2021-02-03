@@ -1,5 +1,10 @@
 simple Cherish-OS gsi build script
 
+notes:
+```bash
+low-ram.sh will help if you have low ram, but if it still gives you errors use swap or zram.
+setup.sh is a script that will install nessecery packages 
+```
 credits:
 ```bash
 phhusson: https://github.com/phhusson/treble_experimentations/
