@@ -9,5 +9,6 @@ credits:
 ```bash
 phhusson: https://github.com/phhusson/treble_experimentations/
 AndyCGYan for their build script for los (that ive used as reference): https://github.com/AndyCGYan/treble_build_los
-VegaBoBo for their base script
+VegaBoBo for their base gsi-script
+Akhilnarang for their scripts 
 ```
