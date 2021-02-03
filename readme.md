@@ -1,4 +1,9 @@
-simple statix gsi build script
+simple Cherish-OS gsi build script
 
-credits to phhusson: https://github.com/phhusson/treble_experimentations/
-and to AndyCGYan for their build script for los (that ive used as reference): https://github.com/AndyCGYan/treble_build_los
+credits:
+```bash
+phhusson: https://github.com/phhusson/treble_experimentations/
+AndyCGYan for their build script: https://github.com/AndyCGYan/treble_build_los
+VegaBoBo for initial scripts
+AkhilNarang for base setup.sh script
+```
