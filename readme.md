@@ -1,4 +1,4 @@
-simple Cherish-OS gsi build script
+simple StatiX gsi build script
 
 notes:
 ```bash
