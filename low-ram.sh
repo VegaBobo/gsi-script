@@ -1,5 +1,3 @@
-#!/bin/bash
-
 echo "DO NOT USE THIS SCRIPT BEFORE REPO SYNC OR OUTSIDE OF BUILD DIR"
 cd build/soong
 git remote add soong https://github.com/Tb12345679/android_build_soong
