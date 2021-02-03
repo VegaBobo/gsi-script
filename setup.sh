@@ -59,6 +59,5 @@ fi
 echo "Installing repo"
 sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
 sudo chmod a+rx /usr/local/bin/repo
-git config --global user.email tejasbesta20@gmail.com
-git config --global user.name tejas besta
-echo "Done!"
+echo "Done, now run: git config --global user.email (your email);
+git config --global user.name (your full name)"
