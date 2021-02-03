@@ -14,12 +14,13 @@ git clone https://github.com/VegaBobo/treble_experimentations
 cp ../files/patches-v300l.zip patches.zip
 unzip -o patches.zip
 bash treble_experimentations/apply-patches.sh .
-cp ../files/statix.mk device/phh/treble
 
 cd device/phh/treble
 git clean -fdx
-bash generate.sh statix
 cd ../../..
+cp ../files/statix.mk device/phh/treble
+cd device/phh/treble
+bash generate.sh statix
 
 cd packages/services/Telecomm
 git revert -m 1 10d34b4e320d3da4e8607724b12ea7e132fe8f5f --no-edit # "Merge tag 'LA.QSSI..."
