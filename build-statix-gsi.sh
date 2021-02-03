@@ -14,10 +14,12 @@ git clone https://github.com/VegaBobo/treble_experimentations
 cp ../files/patches-v300l.zip patches.zip
 unzip -o patches.zip
 bash treble_experimentations/apply-patches.sh .
-cp ../files/statix.mk device/phh/treble
 
 cd device/phh/treble
 git clean -fdx
+cd ../../..
+cp ../files/statix.mk device/phh/treble
+cd device/phh/treble
 bash generate.sh statix
 cd ../../..
 
